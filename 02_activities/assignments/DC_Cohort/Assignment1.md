@@ -208,6 +208,14 @@ Link if you encounter a paywall: https://archive.is/srKHV or https://web.archive
 Consider, for example, concepts of fariness, inequality, social structures, marginalization, intersection of technology and society, etc.
 
 
-```
-Your thoughts...
-```
+Qadri’s article made me think about how databases define which life experiences are considered normal and legitimate. In the article, assumptions about family relationships become requirements for identity verification. A similar issue can arise in recruitment systems that expect applicants to provide a continuous history of formal employment.
+
+A job application form might require an employer’s name, a job title, and start and end dates for every position. This structure assumes that work consists of clearly defined jobs with identifiable employers. If the system also requires applicants to account for every period, it treats continuous employment as the expected career path. These choices reflect values such as stability, formal organizational membership, and a preference for predictable career progression.
+
+However, informal employment and gig work do not always fit this structure. Someone might earn income through several delivery platforms while also completing freelance projects or taking occasional cash-paid jobs. They may have overlapping activities, irregular hours, and no single employer or consistent job title. A rigid form could make this experience difficult to record accurately. The resulting profile might suggest an employment gap, even though the person was working throughout that period.
+
+This matters because the information collected can shape later hiring decisions. If recruiters or automated screening tools interpret gaps as evidence of low commitment, applicants whose experiences do not fit the database structure may be disadvantaged. Workers with fewer opportunities to obtain stable formal jobs could then face another barrier when trying to enter them. Applying the same form to everyone does not necessarily create equal opportunities to demonstrate relevant experience.
+
+I think a fairer system should allow applicants to record concurrent roles, project work, self-employment, and informal work. It should also distinguish a lack of formal employment from a lack of skills or productive activity. Applicants should have space to explain their experiences, and employment gaps should not automatically count against them.
+
+For me, the ethical lesson is that database design involves decisions about whose experiences are visible. Designers should consider whether their categories help people describe their lives accurately, especially when those records influence access to employment.
