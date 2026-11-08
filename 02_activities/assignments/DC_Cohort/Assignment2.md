@@ -57,7 +57,9 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 **HINT:** search type 1 vs type 2 slowly changing dimensions. 
 
 ```
-Your answer...
+Type 1  Overwrite the previous address.** The `CUSTOMER_ADDRESS` table has one row per customer. `customer_id` serves as both the primary key and a foreign key referencing `CUSTOMER`. The other columns store the street address, city, province, and postal code. When a customer moves, the store updates that row with the new address. The table contains the current address only.
+
+Type 2  Keep a history of address changes.** The `CUSTOMER_ADDRESS` table has one row per address version. Each version has its own primary key, `customer_address_id`, and `customer_id` is a foreign key that can appear in multiple rows. Along with the address fields, the table stores `valid_from` and `valid_to`. When a customer moves, the store sets the old row’s `valid_to` to the move date and inserts a new row starting on that date. A `NULL` value in `valid_to` identifies the current address. This design lets the store look up which address was in effect on a given date.
 ```
 
 ***
@@ -193,5 +195,11 @@ Consider, for example, concepts of labour, bias, LLM proliferation, moderating c
 
 
 ```
-Your thoughts...
+Vicki Boykis’s account of ImageNet made me think about whose work becomes visible when a technology succeeds. ImageNet depended on people finding, sorting, and labelling images, including workers recruited through Amazon Mechanical Turk. Each task could be broken down into a few clicks, but together those decisions produced a dataset that researchers could use to train image recognition models. The resulting technology received public attention, while the people who produced its training data were much less visible.
+
+I see a parallel with other forms of platform work. Breaking a job into small tasks makes it easier to assign and pay for each task separately. It also makes the judgment involved in doing the work easy to overlook. An image can be ambiguous, and a worker may need time to decide whether it fits a category. If workers are paid by the task, who bears the cost of taking that extra time? I think fair pay should account for the time and judgment required, including when the correct answer is uncertain.
+
+The categories themselves raise a separate ethical issue. Boykis discusses ImageNet Roulette, which assigned the label “orphan” to a person based on a photograph. A person’s family circumstances cannot be determined from their appearance. Including a category like this invites a system to make an inference that the image cannot support. Better annotation instructions would leave the underlying problem intact, because the category itself is unsuitable for the task.
+
+For me, responsibility starts with the people and institutions that build and use these datasets. They can document how the labels were chosen, give workers a way to flag unclear or inappropriate categories, and review whether each category is suitable for the system’s purpose. A dataset can be technically useful while still reflecting unfair working conditions or questionable assumptions. Evaluating it therefore means asking both how the data was produced and what judgments it allows a model to make about people.
 ```
